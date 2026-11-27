@@ -1,0 +1,26 @@
+{
+  "name": "price-hunter",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Intelligent shopping and price comparison platform for Indian consumers",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w @price-hunter/web",
+    "dev:api": "npm run start:dev -w @price-hunter/api",
+    "build:web": "npm run build -w @price-hunter/web",
+    "build:api": "npm run build -w @price-hunter/api",
+    "typecheck:web": "npm run typecheck -w @price-hunter/web",
+    "typecheck:api": "npm run typecheck -w @price-hunter/api",
+    "typecheck": "npm run typecheck:web && npm run typecheck:api",
+    "test:api": "npm run test -w @price-hunter/api",
+    "db:migrate": "npm run prisma:migrate -w @price-hunter/api",
+    "db:seed": "npm run prisma:seed -w @price-hunter/api",
+    "db:setup": "npm run db:setup -w @price-hunter/api"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
